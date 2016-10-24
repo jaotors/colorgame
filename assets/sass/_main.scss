@@ -11,3 +11,95 @@ main {
 	overflow: hidden;
 }
 
+section {
+
+	.inner {
+		display: block;
+		width: 820px;
+		margin: 0 auto;
+	}
+
+	&.game-content {
+
+		.inner {
+			@extend %centering;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+		}
+
+		h1 {
+			margin: 0;
+			margin-bottom: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 30px;
+
+			&.box-list {
+
+				li {
+					width: (100% / 3) - 1;
+					height: 250px;
+					background-color: #bbb;
+					border: 1px solid #555;
+
+				}
+			}
+
+			&.color-list {
+				padding-bottom: 5px;
+
+				li {
+					width: (100% / 6) - 1;
+					text-align: center;
+					text-transform: uppercase;
+					color: #fff;
+					padding: 5px;
+
+
+					$lists: #e65765 #4e73eb #d7d05e #60cc8e #606060 #8d6ef0;
+					@for $i from 1 through length($lists) {
+						$c: nth($lists, $i);
+
+						&:nth-child(#{$i}) {
+							background-color: $c;
+						}
+					}
+				}
+
+
+
+			}
+		}
+
+		a {
+			display: block;
+			width: 30%;
+			margin: 0 auto;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 3rem;
+			background-color: #68c1f9;
+			padding: 10px;
+			color: #fff;
+
+			&:hover {
+				background-color: #58a3d3;
+			}
+		}
+
+	}
+
+}
+
+
+
