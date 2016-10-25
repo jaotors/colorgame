@@ -11,6 +11,27 @@ main {
 	overflow: hidden;
 }
 
+.modal-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	bottom: 0;
+	z-index: 9;
+
+	.modal-cont {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		p {
+			font-size: 50px;
+			font-family: Quicksand_Bold;
+		}
+	}
+}
+
+
 section {
 
 	.inner {
@@ -71,6 +92,13 @@ section {
 
 						&:nth-child(#{$i}) {
 							background-color: $c;
+							border: 1px solid $c;
+
+							&:hover {
+								background-color: transparent;
+								color: $c;
+								cursor: default;
+							}
 						}
 					}
 				}
