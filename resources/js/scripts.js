@@ -24,6 +24,7 @@ $(document).ready(function() {
 
 	function startGame(click) {
 		// var arrColor = [['#e65765', 'red'], ['#4e73eb', 'blue'], ['#d7d05e', 'yellow'], ['#60cc8e', 'green'], ['#606060', 'black'], ['#8d6ef0', 'purple']];
+		var arrDeck = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']
 
 		if(click == true) {
 			startG = setInterval(function() {
@@ -39,8 +40,8 @@ $(document).ready(function() {
 				// 	'background-color' : arrColor[getRandom()][0]
 				// });
 
-				$('.box-list li:first').text(getRandom());
-				$('.box-list li:last').text(getRandom());
+				$('.box-list li:first').text(arrDeck[getRandom()]);
+				$('.box-list li:last').text(arrDeck[getRandom()]);
 
 			}, 100);
 		} else {
@@ -50,7 +51,7 @@ $(document).ready(function() {
 
 
 	function getRandom() {
-		var number = Math.floor(Math.random() * (14 - 1)) + 1;
+		var number = Math.floor(Math.random() * (13));
 		console.log(number);
 		return number;
 	}
