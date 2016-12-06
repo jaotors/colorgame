@@ -22,27 +22,25 @@ $(document).ready(function() {
 		}
 	});
 
-	console.log(checkColor($('.box-list li:first')));
-
-
-	
-
 	function startGame(click) {
-		var arrColor = [['#e65765', 'red'], ['#4e73eb', 'blue'], ['#d7d05e', 'yellow'], ['#60cc8e', 'green'], ['#606060', 'black'], ['#8d6ef0', 'purple']];
+		// var arrColor = [['#e65765', 'red'], ['#4e73eb', 'blue'], ['#d7d05e', 'yellow'], ['#60cc8e', 'green'], ['#606060', 'black'], ['#8d6ef0', 'purple']];
 
 		if(click == true) {
 			startG = setInterval(function() {
-				$('.box-list li:first').css({
-					'background-color' : arrColor[getRandom()][0]
-				});
+				// $('.box-list li:first').css({
+				// 	'background-color' : arrColor[getRandom()][0]
+				// });
 
-				$('.box-list li:nth-child(2)').css({
-					'background-color' : arrColor[getRandom()][0]
-				});
+				// $('.box-list li:nth-child(2)').css({
+				// 	'background-color' : arrColor[getRandom()][0]
+				// });
 
-				$('.box-list li:last').css({
-					'background-color' : arrColor[getRandom()][0]
-				});
+				// $('.box-list li:last').css({
+				// 	'background-color' : arrColor[getRandom()][0]
+				// });
+
+				$('.box-list li:first').text(getRandom());
+				$('.box-list li:last').text(getRandom());
 
 			}, 100);
 		} else {
@@ -52,7 +50,8 @@ $(document).ready(function() {
 
 
 	function getRandom() {
-		var number = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+		var number = Math.floor(Math.random() * (14 - 1)) + 1;
+		console.log(number);
 		return number;
 	}
 
