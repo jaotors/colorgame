@@ -14,10 +14,6 @@ gulp.task('components', function() {
 	/* bootstrap */
 	gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
 		.pipe(gulp.dest(css));
-
-	/* jquery */
-	gulp.src('node_modules/jquery/dist/jquery.min.js')
-		.pipe(gulp.dest(js));
 });
 
 gulp.task('images', function() {
